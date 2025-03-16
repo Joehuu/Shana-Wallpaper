@@ -55,7 +55,7 @@ const Main = () => {
   const lyricsHandler = () => {
     //Toggles the lyrics
     setHasLyrics(hasLyrics === "true" ? "false" : "true");
-    localStorage.setItem("lyricsBocchi", hasLyrics === "true" ? "false" : "true");
+    localStorage.setItem("source-name-lyrics", hasLyrics === "true" ? "false" : "true");
   };
 
   const reShuffle = (x, y) => {
@@ -63,11 +63,11 @@ const Main = () => {
     if (x === "shuffle") {
       setShuffle(y);
       setReplay(false);
-      localStorage.setItem("bocchi-14", `[${false}, ${y}]`);
+      localStorage.setItem("source-name-repeat-shuffle", `[${false}, ${y}]`);
     } else {
       setReplay(y);
       setShuffle(false);
-      localStorage.setItem("bocchi-14", `[${y}, ${false}]`);
+      localStorage.setItem("source-name-repeat-shuffle", `[${y}, ${false}]`);
     }
   };
 
@@ -140,14 +140,14 @@ const Main = () => {
       let tempArray = [...songList];
       tempArray[y - 1].push(x);
       setSongList(tempArray);
-      localStorage.setItem("playlistBocchi", JSON.stringify(tempArray));
+      localStorage.setItem("source-name-playlist", JSON.stringify(tempArray));
     }
   };
 
   const removeSong = (y) => {
     songList[y - 1].splice(getKey(y), 1);
     setSongList([...songList]);
-    localStorage.setItem("playlistBocchi", JSON.stringify(songList));
+    localStorage.setItem("source-name-playlist", JSON.stringify(songList));
   };
 
   const changeId = (e) => {
@@ -158,7 +158,7 @@ const Main = () => {
   const changeMode = (e) => {
     //Changes mode ~the playlist of what the user is using
     setMode(e);
-    localStorage.setItem("mode", e);
+    localStorage.setItem("source-name-mode", e);
   };
 
   const [prevMode, setPrevMode] = React.useState();
@@ -200,22 +200,22 @@ const Main = () => {
           : "true",
       );
       setMode(
-        localStorage.getItem("mode") !== null
-          ? parseInt(localStorage.getItem("mode"))
+        localStorage.getItem("source-name-mode") !== null
+          ? parseInt(localStorage.getItem("source-name-mode"))
           : 0,
       );
       setSongList(
-        localStorage.getItem("playlistBocchi") !== null
-          ? JSON.parse(localStorage.getItem("playlistBocchi"))
+        localStorage.getItem("source-name-playlist") !== null
+          ? JSON.parse(localStorage.getItem("source-name-playlist"))
           : [[], []],
       );
       setHasLyrics(
-        localStorage.getItem("lyricsBocchi") !== null
-          ? localStorage.getItem("lyricsBocchi")
+        localStorage.getItem("source-name-lyrics") !== null
+          ? localStorage.getItem("source-name-lyrics")
           : "true",
       );
-      if (localStorage.getItem("bocchi-14") !== null) {
-        let temp14 = JSON.parse(localStorage.getItem("bocchi-14"));
+      if (localStorage.getItem("source-name-repeat-shuffle") !== null) {
+        let temp14 = JSON.parse(localStorage.getItem("source-name-repeat-shuffle"));
         setReplay(temp14[0]);
         setShuffle(temp14[1]);
       } else {
@@ -232,13 +232,13 @@ const Main = () => {
       setPlaylist("true");
       localStorage.setItem("playlistH", "true");
       setMode(0);
-      localStorage.setItem("mode", 0);
+      localStorage.setItem("source-name-mode", 0);
       setSongList([[], []]);
-      localStorage.setItem("playlistBocchi", JSON.stringify([[], []]));
+      localStorage.setItem("source-name-playlist", JSON.stringify([[], []]));
       setReplay(false);
       setShuffle(true);
-      localStorage.setItem("bocchi-14", JSON.stringify([true, false]));
-      localStorage.setItem("lyricsBocchi", "true");
+      localStorage.setItem("source-name-repeat-shuffle", JSON.stringify([true, false]));
+      localStorage.setItem("source-name-lyrics", "true");
     }
   }, []);
 
