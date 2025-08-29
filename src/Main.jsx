@@ -55,7 +55,7 @@ const Main = () => {
   const lyricsHandler = () => {
     //Toggles the lyrics
     setHasLyrics(hasLyrics === "true" ? "false" : "true");
-    localStorage.setItem("source-name-lyrics", hasLyrics === "true" ? "false" : "true");
+    localStorage.setItem("shana-lyrics", hasLyrics === "true" ? "false" : "true");
   };
 
   const reShuffle = (x, y) => {
@@ -63,11 +63,11 @@ const Main = () => {
     if (x === "shuffle") {
       setShuffle(y);
       setReplay(false);
-      localStorage.setItem("source-name-repeat-shuffle", `[${false}, ${y}]`);
+      localStorage.setItem("shana-repeat-shuffle", `[${false}, ${y}]`);
     } else {
       setReplay(y);
       setShuffle(false);
-      localStorage.setItem("source-name-repeat-shuffle", `[${y}, ${false}]`);
+      localStorage.setItem("shana-repeat-shuffle", `[${y}, ${false}]`);
     }
   };
 
@@ -140,14 +140,14 @@ const Main = () => {
       let tempArray = [...songList];
       tempArray[y - 1].push(x);
       setSongList(tempArray);
-      localStorage.setItem("source-name-playlist", JSON.stringify(tempArray));
+      localStorage.setItem("shana-playlist", JSON.stringify(tempArray));
     }
   };
 
   const removeSong = (y) => {
     songList[y - 1].splice(getKey(y), 1);
     setSongList([...songList]);
-    localStorage.setItem("source-name-playlist", JSON.stringify(songList));
+    localStorage.setItem("shana-playlist", JSON.stringify(songList));
   };
 
   const changeId = (e) => {
@@ -158,7 +158,7 @@ const Main = () => {
   const changeMode = (e) => {
     //Changes mode ~the playlist of what the user is using
     setMode(e);
-    localStorage.setItem("source-name-mode", e);
+    localStorage.setItem("shana-mode", e);
   };
 
   const [prevMode, setPrevMode] = React.useState();
@@ -200,22 +200,22 @@ const Main = () => {
           : "true",
       );
       setMode(
-        localStorage.getItem("source-name-mode") !== null
-          ? parseInt(localStorage.getItem("source-name-mode"))
+        localStorage.getItem("shana-mode") !== null
+          ? parseInt(localStorage.getItem("shana-mode"))
           : 0,
       );
       setSongList(
-        localStorage.getItem("source-name-playlist") !== null
-          ? JSON.parse(localStorage.getItem("source-name-playlist"))
+        localStorage.getItem("shana-playlist") !== null
+          ? JSON.parse(localStorage.getItem("shana-playlist"))
           : [[], []],
       );
       setHasLyrics(
-        localStorage.getItem("source-name-lyrics") !== null
-          ? localStorage.getItem("source-name-lyrics")
+        localStorage.getItem("shana-lyrics") !== null
+          ? localStorage.getItem("shana-lyrics")
           : "true",
       );
-      if (localStorage.getItem("source-name-repeat-shuffle") !== null) {
-        let temp14 = JSON.parse(localStorage.getItem("source-name-repeat-shuffle"));
+      if (localStorage.getItem("shana-repeat-shuffle") !== null) {
+        let temp14 = JSON.parse(localStorage.getItem("shana-repeat-shuffle"));
         setReplay(temp14[0]);
         setShuffle(temp14[1]);
       } else {
@@ -232,13 +232,13 @@ const Main = () => {
       setPlaylist("true");
       localStorage.setItem("playlistH", "true");
       setMode(0);
-      localStorage.setItem("source-name-mode", 0);
+      localStorage.setItem("shana-mode", 0);
       setSongList([[], []]);
-      localStorage.setItem("source-name-playlist", JSON.stringify([[], []]));
+      localStorage.setItem("shana-playlist", JSON.stringify([[], []]));
       setReplay(false);
       setShuffle(true);
-      localStorage.setItem("source-name-repeat-shuffle", JSON.stringify([true, false]));
-      localStorage.setItem("source-name-lyrics", "true");
+      localStorage.setItem("shana-repeat-shuffle", JSON.stringify([true, false]));
+      localStorage.setItem("shana-lyrics", "true");
     }
   }, []);
 
