@@ -9,4 +9,4 @@ This is a web-based wallpaper from the anime Shakugan no Shana.
 
 ## Credits
 
-Thanks to fandom contributors for the information / assets!
+Thanks to fandom contributors for the metadata / assets and LRCLIB contributors for the lyrics / timing.
