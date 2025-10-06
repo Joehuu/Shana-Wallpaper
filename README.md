@@ -5,7 +5,8 @@
 This is a web-based wallpaper from the anime Shakugan no Shana.
 
 ## Steam Workshop Link:
-[Shakugan no Shana 灼眼のシャナ (Album)]()
+
+[Shakugan no Shana 灼眼のシャナ (Album) (not uploaded yet)]()
 
 ## Credits
 
