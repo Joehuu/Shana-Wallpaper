@@ -2,7 +2,7 @@
 
 *Based on https://github.com/OriginalCube/Bocchi-Wallpaper.*
 
-This is a web-based wallpaper from the anime Shakugan no Shana.
+This is a web-based wallpaper music player for the songs of the Shakugan no Shana anime.
 
 ## Steam Workshop Link
 
