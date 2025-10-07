@@ -8,6 +8,10 @@ This is a web-based wallpaper from the anime Shakugan no Shana.
 
 [Shakugan no Shana 灼眼のシャナ (Album) (not uploaded yet)]()
 
+## Other Wallpapers
+
+- [Toaru-Wallpaper](https://github.com/Joehuu/Toaru-Wallpaper)
+
 ## Credits
 
 Thanks to fandom contributors for the metadata / assets and LRCLIB contributors for the lyrics / timing.
