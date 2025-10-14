@@ -99,5 +99,18 @@
     "album": "Shakugan no Shana F Superiority Shana III Vol. 3",
     "backgroundColor": "#000000",
     "lineColor": "rgba(255, 255, 255, .9)"
+  },
+  {
+    "id": 16,
+    "name": "Prophecy",
+    "backgroundColor": "#000000",
+    "lineColor": "rgba(255, 255, 255, .9)"
+  },
+  {
+    "id": 17,
+    "name": "All in good time",
+    "album": "Linkage",
+    "backgroundColor": "#000000",
+    "lineColor": "rgba(255, 255, 255, .9)"
   }
 ]
