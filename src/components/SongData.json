@@ -112,5 +112,26 @@
     "album": "Linkage",
     "backgroundColor": "#000000",
     "lineColor": "rgba(212, 54, 54, .9)"
+  },
+  {
+    "id": 18,
+    "name": "portamento",
+    "album": "Shakugan no Shana -BEST-",
+    "backgroundColor": "#350504",
+    "lineColor": "rgba(255, 255, 255, .9)"
+  },
+  {
+    "id": 19,
+    "name": "Akai Namida",
+    "nameOriginal": "赤い涙",
+    "backgroundColor": "#451d15",
+    "lineColor": "rgba(221, 129, 69, .9)"
+  },
+  {
+    "id": 20,
+    "name": "Tenjou wo Kakeru Monotachi",
+    "nameOriginal": "天壌を翔る者たち",
+    "backgroundColor": "#451d15",
+    "lineColor": "rgba(221, 129, 69, .9)"
   }
 ]
