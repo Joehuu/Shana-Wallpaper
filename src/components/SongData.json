@@ -3,93 +3,93 @@
     "id": 1,
     "name": "Hishoku no Sora",
     "nameOriginal": "緋色の空",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)"
+    "backgroundColor": "#1e1f1c",
+    "lineColor": "rgba(152, 87, 77, .9)"
   },
   {
     "id": 2,
     "name": "being",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)"
+    "backgroundColor": "#100d0a",
+    "lineColor": "rgba(212, 54, 54, .9)"
   },
   {
     "id": 3,
     "name": "Yoake Umarekuru Shoujo",
     "nameOriginal": "夜明け生まれ来る少女",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)"
+    "backgroundColor": "#140d0e",
+    "lineColor": "rgba(212, 54, 54, .9)"
   },
   {
     "id": 4,
     "name": "Aka no Seijaku",
     "nameOriginal": "紅の静寂",
-    "backgroundColor": "#000000",
+    "backgroundColor": "#1c1417",
     "lineColor": "rgba(255, 255, 255, .9)"
   },
   {
     "id": 5,
     "name": "JOINT",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)"
+    "backgroundColor": "#080404",
+    "lineColor": "rgba(212, 54, 54, .9)"
   },
   {
     "id": 6,
     "name": "BLAZE",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)"
+    "backgroundColor": "#2d1b10",
+    "lineColor": "rgba(239, 74, 17, .9)"
   },
   {
     "id": 7,
     "name": "triangle",
     "album": "Shakugan no Shana -BEST-",
-    "backgroundColor": "#000000",
+    "backgroundColor": "#350504",
     "lineColor": "rgba(255, 255, 255, .9)"
   },
   {
     "id": 8,
     "name": "Sociometry",
     "album": "Shakugan no Shana -BEST-",
-    "backgroundColor": "#000000",
+    "backgroundColor": "#350504",
     "lineColor": "rgba(255, 255, 255, .9)"
   },
   {
     "id": 9,
     "name": "sense",
     "album": "Shakugan no Shana -BEST-",
-    "backgroundColor": "#000000",
+    "backgroundColor": "#350504",
     "lineColor": "rgba(255, 255, 255, .9)"
   },
   {
     "id": 10,
     "name": "Light My Fire",
     "album": "Shakugan no Shana F Superiority Shana III Vol. 1",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)"
+    "backgroundColor": "#17261e",
+    "lineColor": "rgba(108, 141, 147, .9)"
   },
   {
     "id": 11,
     "name": "Serment",
     "album": "Shakugan no Shana F Superiority Shana III Vol. 2",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)"
+    "backgroundColor": "#28312b",
+    "lineColor": "rgba(213, 213, 200, .9)"
   },
   {
     "id": 12,
     "name": "I'll believe",
     "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)"
+    "lineColor": "rgba(212, 54, 54, .9)"
   },
   {
     "id": 13,
     "name": "ONE",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)"
+    "backgroundColor": "#1f1518",
+    "lineColor": "rgba(212, 54, 54, .9)"
   },
   {
     "id": 14,
     "name": "u/n",
     "album": "Shakugan no Shana -BEST-",
-    "backgroundColor": "#000000",
+    "backgroundColor": "#350504",
     "lineColor": "rgba(255, 255, 255, .9)"
   },
   {
@@ -97,20 +97,20 @@
     "name": "Koubou",
     "nameOriginal": "光芒",
     "album": "Shakugan no Shana F Superiority Shana III Vol. 3",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)"
+    "backgroundColor": "#051c2e",
+    "lineColor": "rgba(212, 54, 54, .9)"
   },
   {
     "id": 16,
     "name": "Prophecy",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)"
+    "backgroundColor": "#1e1527",
+    "lineColor": "rgba(212, 54, 54, .9)"
   },
   {
     "id": 17,
     "name": "All in good time",
     "album": "Linkage",
     "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)"
+    "lineColor": "rgba(212, 54, 54, .9)"
   }
 ]
