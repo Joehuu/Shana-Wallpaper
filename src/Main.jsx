@@ -25,7 +25,7 @@ const Main = () => {
   const [uiVolume, setUiVolume] = React.useState(0.5);
   const [textSize, setTextSize] = React.useState(1);
   const [titleDisplay, setTitleDisplay] = React.useState(TitleDisplay.English);
-  const [lyricsDisplay, setLyricsDisplay] = React.useState(LyricsDisplay.Original);
+  const [lyricsDisplay, setLyricsDisplay] = React.useState(LyricsDisplay.Both);
   const [use24HourClock, set24HourClock] = React.useState(true);
   const audioRef = React.useRef(new Audio());
 
