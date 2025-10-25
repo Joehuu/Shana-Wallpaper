@@ -6,7 +6,7 @@ This is a web-based wallpaper music player for the songs of the Shakugan no Shan
 
 ## Steam Workshop Link
 
-Shakugan no Shana 灼眼のシャナ (Album) (not uploaded yet)
+[Shakugan no Shana 灼眼のシャナ (Album)](https://steamcommunity.com/sharedfiles/filedetails/?id=3593550017)
 
 ## Other Wallpapers
 
