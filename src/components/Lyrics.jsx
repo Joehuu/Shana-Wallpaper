@@ -34,17 +34,40 @@ const Lyrics = (props) => {
     Promise.all(lrcFetches)
       .then(responses => Promise.all(responses.map(r => r.text())))
       .then(lrcs => {
-        lrcs.forEach((lrc, i) => newLyrics[i] = lrc.replace(/\r\n/g, '\n').replace(/\r/g, '\n'));
+        lrcs.forEach((lrc, i) => {
+          if (lrc === "" || isHTML(lrc)) {
+            if (i === 0)
+              newLyrics[i] = "[00:00.00] Original lyrics are not available yet!"
+            else
+              newLyrics[i] = "[00:00.00] Romanized lyrics are not available yet!"
+          }
+          else
+            newLyrics[i] = lrc.replace(/\r\n/g, '\n').replace(/\r/g, '\n')
+        });
         setLyrics(newLyrics);
       })
       .catch(function (err) {
-        if (err.name !== "AbortError")
+          // seemingly a non-existent lrc throws an exception in Wallpaper Engine instead of returning an HTML
+        if (err.name !== "AbortError") {
           console.error(` Err: ${err}`);
+          setLyrics(["[00:00.00] Lyrics are not available yet!"]);
+        }
       });
     return () => {
       abortController.abort();
     };
   }, [props.songIndex, props.lyricsDisplay])
+
+  const isHTML = (str) => {
+    var a = document.createElement('div');
+    a.innerHTML = str;
+
+    for (var c = a.childNodes, i = c.length; i--;) {
+      if (c[i].nodeType === 1) return true;
+    }
+
+    return false;
+  }
 
   const onLineClicked = (startMillisecond) => {
     // Nudge value to fix floating-point issue
