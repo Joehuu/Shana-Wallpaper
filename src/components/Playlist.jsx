@@ -141,58 +141,58 @@ const Playlist = (props) => {
         <div className="playlist-item-container">
           {props.mode === 0
             ? SongData.slice(playlistPages * 5, playlistPages * 5 + 5).map(
-                (e, index) => (
-                  <PlaylistItem
-                    uiVolume={props.uiVolume}
-                    key={index}
-                    id={e.id}
-                    index={playlistPages * 5 + index + 1}
-                    songIndex={props.songIndex}
-                    changeId={props.changeId}
-                    mode={props.mode}
-                    titleDisplay={props.titleDisplay}
-                  />
-                ),
-              )
+              (e, index) => (
+                <PlaylistItem
+                  uiVolume={props.uiVolume}
+                  key={index}
+                  id={e.id}
+                  index={playlistPages * 5 + index + 1}
+                  songIndex={props.songIndex}
+                  changeId={props.changeId}
+                  mode={props.mode}
+                  titleDisplay={props.titleDisplay}
+                />
+              ),
+            )
             : null}
 
           {props.mode === 1
             ? props.songList[0] !== null
               ? props.songList[0]
-                  .slice(playlistPages * 5, playlistPages * 5 + 5)
-                  .map((e, index) => (
-                    <PlaylistItem
-                      uiVolume={props.uiVolume}
-                      key={index}
-                      id={e}
-                      addSong={props.addSong}
-                      songIndex={props.songIndex}
-                      index={playlistPages * 5 + index + 1}
-                      changeId={props.changeId}
-                      mode={props.mode}
-                      titleDisplay={props.titleDisplay}
-                    />
-                  ))
+                .slice(playlistPages * 5, playlistPages * 5 + 5)
+                .map((e, index) => (
+                  <PlaylistItem
+                    uiVolume={props.uiVolume}
+                    key={index}
+                    id={e}
+                    addSong={props.addSong}
+                    songIndex={props.songIndex}
+                    index={playlistPages * 5 + index + 1}
+                    changeId={props.changeId}
+                    mode={props.mode}
+                    titleDisplay={props.titleDisplay}
+                  />
+                ))
               : null
             : null}
 
           {props.mode === 2
             ? props.songList[1] !== null
               ? props.songList[1]
-                  .slice(playlistPages * 5, playlistPages * 5 + 5)
-                  .map((e, index) => (
-                    <PlaylistItem
-                      uiVolume={props.uiVolume}
-                      key={index}
-                      id={e}
-                      addSong={props.addSong}
-                      songIndex={props.songIndex}
-                      index={playlistPages * 5 + index + 1}
-                      changeId={props.changeId}
-                      mode={props.mode}
-                      titleDisplay={props.titleDisplay}
-                    />
-                  ))
+                .slice(playlistPages * 5, playlistPages * 5 + 5)
+                .map((e, index) => (
+                  <PlaylistItem
+                    uiVolume={props.uiVolume}
+                    key={index}
+                    id={e}
+                    addSong={props.addSong}
+                    songIndex={props.songIndex}
+                    index={playlistPages * 5 + index + 1}
+                    changeId={props.changeId}
+                    mode={props.mode}
+                    titleDisplay={props.titleDisplay}
+                  />
+                ))
               : null
             : null}
         </div>
