@@ -106,33 +106,44 @@ const Playlist = (props) => {
         boxShadow: "1px 1px 6px #150625",
       }}
     >
-      <div className="playlistNavigation" style={{ height: "10%" }}>
+      <div style={{
+        height: "12%",
+        padding: "5px",
+        borderBottom: `4.5px solid ${SongData[props.songIndex].lineColor}`,
+      }}>
         <button
-          className="h-full w-1/3"
+          className={`h-full w-1/3 button ${props.mode === 0 ? 'button-highlighted' : 'button-normal'}`}
           onClick={() => onChangeMode(0)}
-          style={{
-            borderBottom: `3px solid ${SongData[props.songIndex].lineColor}`,
-            borderRight: `3px solid ${SongData[props.songIndex].lineColor}`,
-          }}
+          style={
+            props.mode === 0 ? {
+              '--line-color': SongData[props.songIndex].lineColor,
+              '--background-color': SongData[props.songIndex].backgroundColor,
+            } : {}
+          }
         >
           Default
         </button>
         <button
-          className="h-full w-1/3"
+          className={`h-full w-1/3 button ${props.mode === 1 ? 'button-highlighted' : 'button-normal'}`}
           onClick={() => onChangeMode(1)}
-          style={{
-            borderBottom: `3px solid ${SongData[props.songIndex].lineColor}`,
-            borderRight: `3px solid ${SongData[props.songIndex].lineColor}`,
-          }}
+          style={
+            props.mode === 1 ? {
+              '--line-color': SongData[props.songIndex].lineColor,
+              '--background-color': SongData[props.songIndex].backgroundColor,
+            } : {}
+          }
         >
           Playlist 1
         </button>
         <button
-          className="w-1/3 h-full"
+          className={`h-full w-1/3 button ${props.mode === 2 ? 'button-highlighted' : 'button-normal'}`}
           onClick={() => onChangeMode(2)}
-          style={{
-            borderBottom: `3px solid ${SongData[props.songIndex].lineColor}`,
-          }}
+          style={
+            props.mode === 2 ? {
+              '--line-color': SongData[props.songIndex].lineColor,
+              '--background-color': SongData[props.songIndex].backgroundColor,
+            } : {}
+          }
         >
           Playlist 2
         </button>
@@ -141,58 +152,58 @@ const Playlist = (props) => {
         <div className="playlist-item-container">
           {props.mode === 0
             ? SongData.slice(playlistPages * 5, playlistPages * 5 + 5).map(
-                (e, index) => (
-                  <PlaylistItem
-                    uiVolume={props.uiVolume}
-                    key={index}
-                    id={e.id}
-                    index={playlistPages * 5 + index + 1}
-                    songIndex={props.songIndex}
-                    changeId={props.changeId}
-                    mode={props.mode}
-                    titleDisplay={props.titleDisplay}
-                  />
-                ),
-              )
+              (e, index) => (
+                <PlaylistItem
+                  uiVolume={props.uiVolume}
+                  key={index}
+                  id={e.id}
+                  index={playlistPages * 5 + index + 1}
+                  songIndex={props.songIndex}
+                  changeId={props.changeId}
+                  mode={props.mode}
+                  titleDisplay={props.titleDisplay}
+                />
+              ),
+            )
             : null}
 
           {props.mode === 1
             ? props.songList[0] !== null
               ? props.songList[0]
-                  .slice(playlistPages * 5, playlistPages * 5 + 5)
-                  .map((e, index) => (
-                    <PlaylistItem
-                      uiVolume={props.uiVolume}
-                      key={index}
-                      id={e}
-                      addSong={props.addSong}
-                      songIndex={props.songIndex}
-                      index={playlistPages * 5 + index + 1}
-                      changeId={props.changeId}
-                      mode={props.mode}
-                      titleDisplay={props.titleDisplay}
-                    />
-                  ))
+                .slice(playlistPages * 5, playlistPages * 5 + 5)
+                .map((e, index) => (
+                  <PlaylistItem
+                    uiVolume={props.uiVolume}
+                    key={index}
+                    id={e}
+                    addSong={props.addSong}
+                    songIndex={props.songIndex}
+                    index={playlistPages * 5 + index + 1}
+                    changeId={props.changeId}
+                    mode={props.mode}
+                    titleDisplay={props.titleDisplay}
+                  />
+                ))
               : null
             : null}
 
           {props.mode === 2
             ? props.songList[1] !== null
               ? props.songList[1]
-                  .slice(playlistPages * 5, playlistPages * 5 + 5)
-                  .map((e, index) => (
-                    <PlaylistItem
-                      uiVolume={props.uiVolume}
-                      key={index}
-                      id={e}
-                      addSong={props.addSong}
-                      songIndex={props.songIndex}
-                      index={playlistPages * 5 + index + 1}
-                      changeId={props.changeId}
-                      mode={props.mode}
-                      titleDisplay={props.titleDisplay}
-                    />
-                  ))
+                .slice(playlistPages * 5, playlistPages * 5 + 5)
+                .map((e, index) => (
+                  <PlaylistItem
+                    uiVolume={props.uiVolume}
+                    key={index}
+                    id={e}
+                    addSong={props.addSong}
+                    songIndex={props.songIndex}
+                    index={playlistPages * 5 + index + 1}
+                    changeId={props.changeId}
+                    mode={props.mode}
+                    titleDisplay={props.titleDisplay}
+                  />
+                ))
               : null
             : null}
         </div>
@@ -219,26 +230,40 @@ const Playlist = (props) => {
         </div>
       </div>
       <div
-        className="playlistNavigation"
         style={{
-          height: "10%",
+          height: "12%",
           borderTop: `4.5px solid ${SongData[props.songIndex].lineColor}`,
           position: "relative",
+          padding: "5px",
+          display: "flex",
+          columnGap: "5px",
+          justifyContent: "space-between",
         }}
       >
         {props.mode === 0 ? (
           <>
             <button
-              className="w-1/2 h-full"
+              className={`w-1/2 h-full button ${includedInPlaylist(1) ? 'button-highlighted' : 'button-normal'}`}
               onClick={() => onFooter(!includedInPlaylist(1), 1)}
-              style={{
-                borderRight: `3px solid ${SongData[props.songIndex].lineColor}`,
-                height: "100%",
-              }}
+              style={
+                includedInPlaylist(1) ? {
+                  '--line-color': SongData[props.songIndex].lineColor,
+                  '--background-color': SongData[props.songIndex].backgroundColor,
+                } : {}
+              }
             >
               {includedInPlaylist(1) ? "-" : "+"} Playlist 1
             </button>
-            <button className="w-1/2 h-full" onClick={() => onFooter(!includedInPlaylist(2), 2)}>
+            <button
+              className={`w-1/2 h-full button ${includedInPlaylist(2) ? 'button-highlighted' : 'button-normal'}`}
+              onClick={() => onFooter(!includedInPlaylist(2), 2)}
+              style={
+                includedInPlaylist(2) ? {
+                  '--line-color': SongData[props.songIndex].lineColor,
+                  '--background-color': SongData[props.songIndex].backgroundColor,
+                } : {}
+              }
+            >
               {includedInPlaylist(2) ? "-" : "+"} Playlist 2
             </button>
           </>
