@@ -223,5 +223,22 @@ code {
   height: 0;
 }
 
+.button {
+  border-radius: 5px;
+  opacity: 0.85;
+}
+
+.button-highlighted {
+  background-color: var(--line-color);
+  color: var(--background-color);
+  font-weight: 500;
+}
+
+.button-normal {
+  background-color: transparent;
+  color: white;
+  font-weight: normal;
+}
+
 @media screen and (min-width: 1px) and (max-width: 1360px) {
 }
