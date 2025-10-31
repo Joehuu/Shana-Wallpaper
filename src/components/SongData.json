@@ -133,5 +133,50 @@
     "nameOriginal": "天壌を翔る者たち",
     "backgroundColor": "#451d15",
     "lineColor": "rgba(221, 129, 69, .9)"
+  },
+  {
+    "id": 21,
+    "name": "EXIST",
+    "album": "Shakugan no Shana Assorted Shana Vol. I",
+    "backgroundColor": "#000000",
+    "lineColor": "rgba(255, 255, 255, .9)"
+  },
+  {
+    "id": 22,
+    "name": "Hisoyakani Kirara",
+    "nameOriginal": "ひそやかにキララ",
+    "album": "Shakugan no Shana Assorted Shana Vol. I",
+    "backgroundColor": "#000000",
+    "lineColor": "rgba(255, 255, 255, .9)"
+  },
+  {
+    "id": 23,
+    "name": "Wolf in my heart",
+    "album": "Shakugan no Shana Assorted Shana Vol. II",
+    "backgroundColor": "#000000",
+    "lineColor": "rgba(255, 255, 255, .9)"
+  },
+  {
+    "id": 24,
+    "name": "tough",
+    "album": "Shakugan no Shana Assorted Shana Vol. II",
+    "backgroundColor": "#000000",
+    "lineColor": "rgba(255, 255, 255, .9)"
+  },
+  {
+    "id": 25,
+    "name": "Kamen no Hakuraku",
+    "nameOriginal": "仮面の剥落",
+    "album": "Shakugan no Shana Assorted Shana Vol. III",
+    "backgroundColor": "#000000",
+    "lineColor": "rgba(255, 255, 255, .9)"
+  },
+  {
+    "id": 26,
+    "name": "Blue Sky",
+    "nameOriginal": "ブルースカイ",
+    "album": "Shakugan no Shana Assorted Shana Vol. III",
+    "backgroundColor": "#000000",
+    "lineColor": "rgba(255, 255, 255, .9)"
   }
 ]
